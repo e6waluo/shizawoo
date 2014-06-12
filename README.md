@@ -1,4 +1,0 @@
-shizawoo
-========
-
-person item info
