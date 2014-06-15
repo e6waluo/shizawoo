@@ -19,13 +19,10 @@ namespace ShiZaWoo.Framework.WebApp
         protected void Button1_Click(object sender, EventArgs e)
         {
             Base_UsersBLL user = new Base_UsersBLL();
-            bool lstatus = user.ValidateUserLogin(TextBox1.Text, TextBox2.Text);
-            if(lstatus)
-            {
-                Label1.Text = "登录成功！";
-            }
-            else
-                Label1.Text = "失败了！";
+            bool lstatus = user.ValidateUserLogin(LoginForm_email.Text, LoginForm_password.Text);
+            
+                Response.Redirect("/Admin/Default.aspx");
+          
         }
     }
 }
